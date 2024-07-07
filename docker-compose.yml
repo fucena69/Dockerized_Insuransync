@@ -10,7 +10,7 @@ services:
         extra_hosts:
             - 'host.docker.internal:host-gateway'
         ports:
-            - '${APP_PORT:-80}:80'
+            - '${APP_PORT:-80}:8000'
             - '${VITE_PORT:-5173}:${VITE_PORT:-5173}'
         environment:
             WWWUSER: '${WWWUSER}'
@@ -31,7 +31,7 @@ services:
             context: .
             dockerfile: ./docker/frontend/DockerFile
         container_name: "frontend"
-        working_dir: /usr/src/app/insurancewebapp
+        working_dir: /usr/src/app/insurancewebapp/src
         volumes: 
             - ./insurancewebapp/:/usr/src/app/insurancewebapp 
         ports: 
