@@ -10,25 +10,8 @@ vendor/**/test*
 vendor/**/tests*
 vendor/**/Tests*
 
-**/*node_modules
-
 **.git
 .idea
 **.gitignore
 **.gitattributes
 **.sass-cache
-*.env*
-composer.json
-
-*.config.js
-?ulpfile.js
-?untfile.js
-package.json
-phpunit.xml
-readme.md
-phpspec.yml
-
-Dockerfile
-docker-compose.yml
-run
-run.ps1

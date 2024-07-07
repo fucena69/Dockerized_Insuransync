@@ -12,19 +12,9 @@ vendor/**/Tests*
 
 **/*node_modules/
 **/*node_modules
-**.git
+
 .idea
 **.gitignore
 **.gitattributes
 **.sass-cache
 
-
-*.config.js
-?ulpfile.js
-?untfile.js
-phpunit.xml
-readme.md
-phpspec.yml
-
-run
-run.ps1
