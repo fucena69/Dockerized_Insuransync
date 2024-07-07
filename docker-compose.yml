@@ -25,7 +25,7 @@ services:
             - sail
         depends_on:
             - mysql
-     Frontend Service
+  ##   Frontend Service
     frontend:
         build:
             context: .
