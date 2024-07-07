@@ -25,6 +25,22 @@ services:
             - sail
         depends_on:
             - mysql
+     #Frontend Service
+    frontend:
+        build:
+            context: .
+            dockerfile: ./docker/frontend/DockerFile
+        container_name: "frontend"
+        working_dir: /usr/src/app/insurancewebapp
+        volumes: 
+            - ./insurancewebapp/:/usr/src/app/insurancewebapp 
+        ports: 
+            - '4200:80' 
+        command: >
+            bash -c "npm install && ng serve --host 0.0.0.0 --port 4200"
+        networks:
+            - sail
+    #MYSQL Service
     mysql:
         image: 'mysql/mysql-server:8.0'
         ports:
