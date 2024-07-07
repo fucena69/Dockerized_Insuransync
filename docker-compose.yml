@@ -25,7 +25,7 @@ services:
             - sail
         depends_on:
             - mysql
-     #Frontend Service
+     Frontend Service
     frontend:
         build:
             context: .
@@ -33,7 +33,7 @@ services:
         container_name: "frontend"
         working_dir: /usr/src/app/insurancewebapp
         volumes: 
-            - ./frontend/:/usr/src/app/insurancewebapp 
+            - ./insurancewebapp/:/usr/src/app/insurancewebapp 
         ports: 
             - '4200:80' 
         command: >
